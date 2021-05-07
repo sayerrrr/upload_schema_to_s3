@@ -1,0 +1,12 @@
+name: "upload-schema-to-s3"
+description: "Upload graphql shema to S3 for the codegen.yml file to generate types"
+inputs:
+  tag:
+    description: "name of branch"
+    required: true
+outputs:
+  path:
+    description: "Path to the schema to load into codegen.yml"
+runs:
+  using: "node12"
+  main: "index.js"
